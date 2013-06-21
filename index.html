@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Beards</title>
+  <meta name="viewport" content="width=device-width">
+  <style>
+  body {
+    margin: 100px auto 0;
+    width: 400px;
+    font-family: Georgia, serif;
+  }
+  .beards {
+    display: block;
+    width: 70px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f66;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+  <h1>Beard Brands</h1>
+  <p>In the spirit of James Bridle's <a href="http://shorttermmemoryloss.com/dragons/">Dragons</a>, this bookmarklet replace the word 'brand' with 'beard'.</p>
+  <a class="beards" draggable="true" href="javascript:function htmlreplace(a, b, element) { if (!element) element = document.body; var nodes = element.childNodes; for (var n=0; n<nodes.length; n++) { if (nodes[n].nodeType == Node.TEXT_NODE) { var r = new RegExp(a, 'gi'); nodes[n].textContent = nodes[n].textContent.replace(r, b); } else { htmlreplace(a, b, nodes[n]); } } } htmlreplace('brands', 'Beards');htmlreplace('brand', 'Beard');">Beards</a>
+</body>
+</html>
